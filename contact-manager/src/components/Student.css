@@ -1,0 +1,266 @@
+/* General styles for the student management container */
+.student-management {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #f0f8ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.student-management h1 {
+    text-align: center;
+    color: #1e3d59;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Search input and add button container */
+.student-management input[type="text"],
+.student-management button {
+    padding: 10px;
+    border: 1px solid #a6c9e2;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.student-management input[type="text"] {
+    width: 250px;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.student-management input[type="text"]:focus {
+    border-color: #1e88e5;
+    outline: none;
+    box-shadow: 0 0 8px rgba(30, 136, 229, 0.3);
+}
+
+.student-management button {
+    background-color: #1e88e5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.student-management button:hover {
+    background-color: #166bb2;
+}
+
+/* Responsive table wrapper */
+.table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: #e6f2ff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Student table styles with fixed column width */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Allows horizontal scrolling on smaller screens */
+    table-layout: fixed; /* Fixes column widths */
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 50px; /* Sets a fixed width for each cell */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th {
+    background-color: #1e88e5;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f8fc;
+}
+
+tr:hover {
+    background-color: #c8e1f9;
+    transition: background-color 0.2s;
+}
+
+/* Customize column width for specific columns to allow more space */
+th:nth-child(1),
+td:nth-child(1), /* Name column */
+th:nth-child(2),
+td:nth-child(2), /* Roll No column */
+th:nth-child(3),
+td:nth-child(3)  /* Department column */ {
+    width: 80px;
+}
+
+th:nth-child(6),
+td:nth-child(6), /* Phone Number column */
+th:nth-child(7),
+td:nth-child(7)  /* Email column */ {
+    width: 120px;
+}
+
+/* Button styles inside the table */
+table button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+table button:first-of-type {
+    background-color: #1e88e5;
+    color: white;
+    margin-right: 5px;
+}
+
+table button:last-of-type {
+    background-color: #e53935;
+    color: white;
+}
+
+table button:first-of-type:hover {
+    background-color: #166bb2;
+}
+
+table button:last-of-type:hover {
+    background-color: #d32f2f;
+}
+
+/* Modal styles */
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.ReactModal__Content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ReactModal__Content h2 {
+    color: #1e3d59;
+    margin-bottom: 15px;
+}
+
+.ReactModal__Content input[type="text"],
+.ReactModal__Content input[type="email"],
+.ReactModal__Content input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.ReactModal__Content input[type="text"]:focus,
+.ReactModal__Content input[type="email"]:focus,
+.ReactModal__Content input[type="number"]:focus {
+    border-color: #1e88e5;
+    outline: none;
+    box-shadow: 0 0 6px rgba(30, 136, 229, 0.2);
+}
+
+.ReactModal__Content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ReactModal__Content button:first-of-type {
+    background-color: #1e88e5;
+    color: white;
+    margin-right: 10px;
+}
+
+.ReactModal__Content button:first-of-type:hover {
+    background-color: #166bb2;
+}
+
+.ReactModal__Content button:last-of-type {
+    background-color: #e53935;
+    color: white;
+}
+
+.ReactModal__Content button:last-of-type:hover {
+    background-color: #d32f2f;
+}
+
+
+/* Styles for the view class */
+.view {
+    font-family: Arial, sans-serif; /* Consistent font family */
+    padding: 20px; /* Increased padding for a spacious layout */
+    background-color: #ffffff; /* White background for clarity */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for depth */
+    border: 1px solid #e0e0e0; /* Light border for definition */
+    margin-bottom: 15px; /* Space below the view section */
+}
+
+/* Styles for individual paragraphs inside the view class */
+.view p {
+    margin: 12px 0; /* More space between paragraphs */
+    font-size: 15px; /* Increased font size for better readability */
+    line-height: 1.6; /* Improved line spacing */
+    color: #555; /* Dark gray for better contrast */
+}
+
+/* Styles for strong elements inside the view class */
+.view strong {
+    color: #333; /* Darker color for strong text */
+    margin-right: 8px; /* Space between label and value */
+}
+
+/* Optional: Style for buttons inside the view class */
+.view .modal-close-button {
+    background-color: #4CAF50; /* Green background for the close button */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding for size */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 15px; /* Space above the button */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover transition */
+}
+
+/* Change background color and scale on hover for the close button */
+.view .modal-close-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Add responsive styling */
+@media (max-width: 600px) {
+    .view {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+    .view p {
+        font-size: 14px; /* Slightly smaller font for better fit */
+    }
+}
+
+

@@ -1,0 +1,90 @@
+/* Auth.css */
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.login h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.login .container {
+    max-width: 400px; /* Container width */
+    width: 100%; /* Full width on smaller screens */
+    padding: 20px; /* Padding inside the container */
+    background: white; /* Background color of the form */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Animation for card */
+}
+
+.login .container:hover {
+    transform: scale(1.02); /* Slightly increase size on hover */
+}
+
+/* Form Styles */
+.login form {
+    display: flex;
+    flex-direction: column; /* Column layout */
+}
+
+.login label {
+    margin-bottom: 8px; /* Space below label */
+    font-weight: bold; /* Make labels bold */
+    color: #555; /* Softer color for labels */
+}
+
+.login input {
+    padding: 12px; /* Padding inside input */
+    margin-bottom: 20px; /* Space between inputs */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 6px; /* Rounded corners for inputs */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s ease; /* Smooth transition */
+    width: 120%;
+}
+
+.login input:focus {
+    border-color: #007bff; /* Border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow on focus */
+}
+
+/* Button Styles */
+.login button {
+    padding: 12px; /* Padding inside buttons */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    font-size: 16px; /* Font size for buttons */
+    margin-top: 10px; /* Space above buttons */
+}
+
+.login button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Message Styles */
+.login p {
+    text-align: center; /* Center messages */
+    color: red; /* Message color */
+    margin-top: 10px; /* Space above message */
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .login .container {
+        width: 90%; /* Full width on smaller screens */
+        margin: 20px auto; /* Reduced margin */
+    }
+}
